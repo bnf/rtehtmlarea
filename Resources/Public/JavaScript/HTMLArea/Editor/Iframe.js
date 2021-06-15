@@ -50,7 +50,7 @@ define(['TYPO3/CMS/Rtehtmlarea/HTMLArea/UserAgent/UserAgent',
 				Dom.addClass(this.getEl(), 'noStatusBar');
 			}
 			this.initStyleChangeEventListener();
-			if (UserAgent.isOpera) {
+			if (UserAgent.isOpera || UserAgent.isChrome) {
 				var self = this;
 				Event.one(this.getEl(), 'load', function (event) { self.initializeIframe(); return true; })
 			} else {
